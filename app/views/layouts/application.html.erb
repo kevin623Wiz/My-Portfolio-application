@@ -13,26 +13,17 @@
   </head>
 
   <body>
-    <header>
-      <a class = "header-logo" href = "/">Potepan Shere</a>
+    <header class = "header">
+      <a class = "header-logo" href = "/">Campsites for women</a>
       <div class = "header-nav">
         <% if user_signed_in? %>
           <div class="btn-group">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-              <%= image_tag current_user.avatar.url, class: "avatar" %>  
-              <%= current_user.name %>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><%= link_to "施設の新規登録", new_room_path, class:"dropdown-item" %></li>
-              <li><%= link_to "登録済み施設一覧", rooms_path(current_user.rooms), class:"dropdown-item" %></li>
-              <li><%= link_to "予約済み施設一覧", reservations_path(current_user.reservations), class:"dropdown-item" %></li>
-              <li><%= link_to "アカウント設定", users_account_path, class:"dropdown-item" %></li>
-              <li><%= link_to "ログアウト", destroy_user_session_path, class:"dropdown-item", method: :delete %></li>
-            </ul>
+            <%= current_user.name %>
+            <%= link_to "ログアウト", destroy_user_session_path, class:"dropdown-item", method: :delete %>               
           </div>
         <% else %>
-            <button><%= link_to "ログイン", new_user_session_path, class: 'button header-login' %></button>
-            <button><%= link_to "新規登録", new_user_registration_path, class: 'button header-new' %></button>
+            <button type="button" class="btn btn-outline-light"><%= link_to "ログイン", new_user_session_path, class: 'user-button header-login' %></button>
+            <button type="button" class="btn btn-outline-light"><%= link_to "新規登録", new_user_registration_path, class: 'user-button header-new' %></button>
         <% end %>
       </div>
     </header>

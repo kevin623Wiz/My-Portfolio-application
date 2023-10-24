@@ -1,0 +1,27 @@
+.form-container {
+    text-align: center;
+    margin: 30px auto 30px;
+    padding: 50px 0 50px;
+    width: 50%;
+    background-color: #ddd;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-box {
+    width: 80%;
+    height: 50px;
+}
+
+.form-login input[type = "submit"],
+.form-new input[type = "submit"] {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 70%;
+    height: 50px;
+    border-style: none;
+    background-color: orange;
+    border-radius: 20px;
+}
