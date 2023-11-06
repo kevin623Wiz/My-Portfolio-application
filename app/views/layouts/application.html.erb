@@ -29,6 +29,7 @@
         <% else %>
             <button type="button" class="btn btn-outline-light"><%= link_to "ログイン", new_user_session_path, class: 'user-button header-login' %></button>
             <button type="button" class="btn btn-outline-light"><%= link_to "新規登録", new_user_registration_path, class: 'user-button header-new' %></button>
+            <button type="button" class="btn btn-outline-light"><%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class: 'user-button header-new' %></button>
         <% end %>
       </div>
     </header>
