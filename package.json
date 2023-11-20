@@ -19,7 +19,9 @@
   "devDependencies": {
     "webpack-dev-server": "^3"
   },
-  "engines": {
-    "node": "20.9.0"
+  "scripts": {
+    "dev": "NODE_OPTIONS='--openssl-legacy-provider' nuxt",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' nuxt build",
+    "start": "nuxt start"
   }
 }
