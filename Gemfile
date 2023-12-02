@@ -53,7 +53,7 @@ end
 
 #=======追加=========
 group :production do
-  gem 'pg','1.1'
+  gem 'pg','0.14'
 end
 #====================
 
